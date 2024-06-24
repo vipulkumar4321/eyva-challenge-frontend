@@ -96,7 +96,7 @@ const TeamSettings = ({ data }) => {
 
   return (
     <div className="container mx-auto px-4">
-      <div className="py-4 flex justify-between items-center">
+      <div className="py-4 flex flex-col md:flex-row mb-4 md:mb-0 justify-between items-center">
         <div className="flex justify-between items-center">
           <p className="mr-4">Team members</p>
           <p className="mr-4">{filteredData.length} users</p>
@@ -110,7 +110,7 @@ const TeamSettings = ({ data }) => {
           variant="contained"
           color="secondary"
           onClick={handleDeleteSelected}
-          className="bg-red-500 text-white py-2 px-4 rounded-md"
+          className="bg-red-500 text-white my-4 py-2 px-4 rounded-md"
           disabled={selected.length === 0} // Disable if no items selected
         >
           Delete Selected
